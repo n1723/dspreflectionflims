@@ -1,0 +1,7 @@
+{
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://reygutekdetzfxwcqhnx.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_KU11mXZN7pQrGdJSIpvWlg_1jrIza7y",
+    "VITE_SUPABASE_URL": "https://reygutekdetzfxwcqhnx.supabase.co",
+    "VITE_SUPABASE_ANON_KEY": "sb_publishable_KU11mXZN7pQrGdJSIpvWlg_1jrIza7y",
+}
