@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+
+  /* === NEW COOL PREMIUM PALETTE === */
+  /* Primary: Deep Slate Teal */
+  --color-brand-50:  #f0f7f7;
+  --color-brand-100: #d9eeee;
+  --color-brand-200: #b0d9d9;
+  --color-brand-300: #7bbebe;
+  --color-brand-400: #4a9fa0;
+  --color-brand-500: #2d8485;
+  --color-brand-600: #1f6b6c;
+  --color-brand-700: #185455;
+  --color-brand-800: #134040;
+  --color-brand-900: #0d2e2e;
+  --color-brand-950: #071a1a;
+
+  /* Accent: Dusty Mauve / Soft Lavender */
+  --color-accent-50:  #f5f3ff;
+  --color-accent-100: #ede8ff;
+  --color-accent-200: #d9d0ff;
+  --color-accent-300: #bbaeff;
+  --color-accent-400: #9b82f5;
+  --color-accent-500: #7c5ce4;
+  --color-accent-600: #6340cc;
+  --color-accent-700: #4f30a8;
+  --color-accent-800: #3d2480;
+  --color-accent-900: #2c1a5e;
+
+  /* Warm Cream / Ivory */
+  --color-cream-50:  #fdfcf8;
+  --color-cream-100: #f9f6ee;
+  --color-cream-200: #f2ecdb;
+  --color-cream-300: #e8dfc4;
+  --color-cream-400: #d4c49a;
+  --color-cream-500: #bfa872;
+
+  /* Sage Green */
+  --color-sage-50:  #f4f7f4;
+  --color-sage-100: #e4ede4;
+  --color-sage-200: #c6d9c6;
+  --color-sage-300: #9dbf9d;
+  --color-sage-400: #6fa06f;
+  --color-sage-500: #4d834d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fdfcf8;
+  color: #0d2e2e;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 800;
+}
+
+/* Serif display class */
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Masonry columns */
+.columns-2 { column-count: 2; }
+.columns-3 { column-count: 3; }
+.columns-4 { column-count: 4; }
+
+@media (max-width: 768px) {
+  .md\:columns-3 { column-count: 2; }
+  .lg\:columns-4 { column-count: 2; }
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+}
+
+/* Noise texture overlay for premium feel */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
